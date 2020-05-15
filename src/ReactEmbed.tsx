@@ -1,6 +1,19 @@
 import * as React from 'react';
 import defaultRouter from './routeToBlock';
 import defaultRender from './renderer';
+import Figma from './blocks/figma';
+import Gist from './blocks/gist';
+import Gmaps from './blocks/gmaps';
+import Imgur from './blocks/imgur';
+import Instagram from './blocks/instagram';
+import JsFiddle from './blocks/jsfiddle';
+import SimplePlayerWrapper from './blocks/react-simple-player';
+import ReactPlayerWrapper from './blocks/react-player';
+import Replit from './blocks/replit';
+import SoundCloud from './blocks/soundcloud';
+import TwitterTweet from './blocks/tweet';
+import YouTubeWrapper from './blocks/youtube';
+import Gfycat from './blocks/gfycat';
 
 const IS_BROWSER = typeof window === 'object';
 
@@ -26,19 +39,19 @@ export interface Blocks {
 }
 
 const defaultBlocks: Blocks = {
-  figma: React.lazy(() => import('./blocks/figma')),
-  gist: React.lazy(() => import('./blocks/gist')),
-  gmaps: React.lazy(() => import('./blocks/gmaps')),
-  imgur: React.lazy(() => import('./blocks/imgur')),
-  instagram: React.lazy(() => import('./blocks/instagram')),
-  jsfiddle: React.lazy(() => import('./blocks/jsfiddle')),
-  simplePlayer: React.lazy(() => import('./blocks/react-simple-player')),
-  reactPlayer: React.lazy(() => import('./blocks/react-player')),
-  replit: React.lazy(() => import('./blocks/replit')),
-  soundcloud: React.lazy(() => import('./blocks/soundcloud')),
-  tweet: React.lazy(() => import('./blocks/tweet')),
-  youtube: React.lazy(() => import('./blocks/youtube')),
-  gfycat: React.lazy(() => import('./blocks/gfycat')),
+  figma: Figma,
+  gist: Gist,
+  gmaps: Gmaps,
+  imgur: Imgur,
+  instagram: Instagram,
+  jsfiddle: JsFiddle,
+  simplePlayer: SimplePlayerWrapper,
+  reactPlayer: ReactPlayerWrapper,
+  replit: Replit,
+  soundcloud: SoundCloud,
+  tweet: TwitterTweet,
+  youtube: YouTubeWrapper,
+  gfycat: Gfycat,
 };
 
 export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];

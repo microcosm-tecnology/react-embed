@@ -20,7 +20,6 @@
     "prettier:diff": "prettier -l 'src/**/*.{ts,tsx,js,jsx}'",
     "tslint": "tslint 'src/**/*.{js,jsx,ts,tsx}' -t verbose",
     "test": "jest --no-cache --config='jest.config.js'",
-    "release": "semantic-release",
     "clean": "rimraf lib esm",
     "build:cjs": "tsc",
     "build:es": "tsc -m esNext --outDir esm",
@@ -72,18 +71,6 @@
     "typescript": "3.9.2",
     "url-loader": "4.1.0"
   },
-  "release": {
-    "verifyConditions": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ],
-    "prepare": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "git-cz"
@@ -96,12 +83,5 @@
     "react-simple-player": "^1.0.3",
     "react-youtube": "^7.11.2",
     "scriptjs": "^2.5.9"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "pretty-quick --staged && yarn tslint",
-      "pre-push": "yarn prettier:diff"
-    }
   }
 }

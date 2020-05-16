@@ -80,6 +80,4 @@ typings/
 .dynamodb/
 
 # Build folder
-/lib/
-/esm/
 /storybook-static/

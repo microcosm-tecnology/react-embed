@@ -28,7 +28,7 @@
     "storybook": "start-storybook -p 6010",
     "storybook:build": "build-storybook",
     "storybook:clean": "rimraf storybook-static",
-    "preinstall": "npm run build",
+    "install": "npm run build",
     "prepare": "npm run build"
   },
   "keywords": [],

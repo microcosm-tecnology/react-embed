@@ -28,7 +28,7 @@
     "storybook": "start-storybook -p 6010",
     "storybook:build": "build-storybook",
     "storybook:clean": "rimraf storybook-static",
-    "install": "yarn build"
+    "preinstall": "yarn build"
   },
   "keywords": [],
   "peerDependencies": {

@@ -27,7 +27,8 @@
     "build": "yarn build:cjs && yarn build:es",
     "storybook": "start-storybook -p 6010",
     "storybook:build": "build-storybook",
-    "storybook:clean": "rimraf storybook-static"
+    "storybook:clean": "rimraf storybook-static",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "peerDependencies": {
@@ -89,7 +90,6 @@
       "path": "git-cz"
     }
   },
-  "postinstall": "npm run build",
   "dependencies": {
     "p4-css": "^1.5.1",
     "react-instagram-embed": "^1.5.0",
